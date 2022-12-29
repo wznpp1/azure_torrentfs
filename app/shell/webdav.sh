@@ -7,6 +7,7 @@ rm -rf /root/app/anacrolix/downloads/*2022*
 rm -rf /root/app/rclone/mnt/*
 mkdir -p /root/app/rclone/mnt/2019/
 mkdir -p /root/app/rclone/mnt/2020/
+mkdir -p /root/app/rclone/mnt/2021/
 mkdir -p /root/app/rclone/mnt/2022/
 
 ln -s /root/app/anacrolix/mnt/*2019* /root/app/rclone/mnt/2019/
