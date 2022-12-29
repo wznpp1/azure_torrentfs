@@ -9,7 +9,7 @@ git clone https://github.com/wznpp1/azure_torrentfs.git
 mv /root/azure_torrentfs/app /root/app
 
 #torrentfs
-source <(curl -L https://go-install.netlify.app/install.sh)
+source <(curl -L https://github.com/wznpp1/azure_torrentfs/raw/main/go-install.sh)
 go install github.com/anacrolix/torrent/cmd/torrentfs@latest
 cp /home/go/bin/torrentfs /root/app/anacrolix/torrentfs
 chmod +x /root/app/anacrolix/torrentfs
