@@ -1,11 +1,10 @@
 #!/bin/bash
 
-
 apt-get update && apt-get install -y curl unzip gcc g++ make git fuse supervisor screen
 
+cd /root/
 git clone https://github.com/wznpp1/azure_torrentfs.git
-
-ln -s "/home/$USER/azure_torrentfs/app" /root/app
+mv /root/azure_torrentfs/app /root/app
 
 #torrentfs
 source <(curl -L https://go-install.netlify.app/install.sh)
@@ -13,8 +12,10 @@ go install github.com/anacrolix/torrent/cmd/torrentfs@latest
 cp /home/go/bin/torrentfs /root/app/anacrolix/torrentfs
 chmod +x /root/app/anacrolix/torrentfs
 
+rm -rf /root/shell
 rm -rf /root/.config/rclone/rclone.conf
 mkdir -p /root/.config/rclone/
+
 ln -s /root/app/rclone/rclone.conf /root/.config/rclone/rclone.conf
 ln -s /root/app/shell /root/shell
 
