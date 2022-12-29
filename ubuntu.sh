@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -s
+
 apt-get update && apt-get install -y curl unzip gcc g++ make git fuse supervisor screen
 
 cd /root/
